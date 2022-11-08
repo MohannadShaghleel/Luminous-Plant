@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            <div class="loader">
+                <div id="first">
+                    <div id="second">
+                        <div id="third">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <link rel="icon" href="Tree icon.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Luminous Plant">
+
+        <title>Luminous Plant</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <link href="CSS/bootstrap.min.css" rel="stylesheet">
+
+        <link href="CSS/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="CSS/magnific-popup.css" rel="stylesheet">
+
+        <link href="CSS/tooplate-waso-strategy.css" rel="stylesheet">
+
+        <style>
+            button {
+                padding: 0;
+                margin: 0;
+                border: none;
+                background: none;
+              }
+              
+              button {
+                --primary-color: #111;
+                --hovered-color: #c84747;
+                position: relative;
+                display: flex;
+                font-weight: 600;
+                font-size: 20px;
+                gap: 0.5rem;
+                align-items: center;
+              }
+              
+              button p {
+                margin: 0;
+                position: relative;
+                font-size: 20px;
+                color: var(--primary-color)
+              }
+              
+              button::after {
+                position: absolute;
+                content: "";
+                width: 0;
+                left: 0;
+                bottom: -7px;
+                background: var(--hovered-color);
+                height: 2px;
+                transition: 0.3s ease-out;
+              }
+              
+              button p::before {
+                position: absolute;
+              /*   box-sizing: border-box; */
+                content: "Subscribe";
+                width: 0%;
+                inset: 0;
+                color: var(--hovered-color);
+                overflow: hidden;
+                transition: 0.3s ease-out;
+              }
+              
+              button:hover::after {
+                width: 100%;
+              }
+              
+              button:hover p::before {
+                width: 100%;
+              }
+              
+              button:hover svg {
+                transform: translateX(4px);
+                color: var(--hovered-color)
+              }
+              
+              button svg {
+                color: var(--primary-color);
+                transition: 0.2s;
+                position: relative;
+                width: 15px;
+                transition-delay: 0.2s;
+              }
+
+              .loader {
+                background-color: black;
+                position: relative;
+                width: 2.5em;
+                height: 2.5em;
+                transform-origin: center;
+                transition: 1s;
+                border-radius: 50px;
+                box-shadow: inset 0px 0px 10px purple,
+                inset 5px 5px 12px rgba(44, 0, 114, 0.8),
+                inset 8px 8px 1px rgba(160, 120, 255, 0.7),
+                0px 0px 1px rgba(160, 120, 255, 0.6);
+                animation: 1.2s linear infinite 0s running first682;
+              }
+              
+              .loader div {
+                width: inherit;
+                height: inherit;
+                position: absolute;
+              }
+              
+              #first {
+                transform: rotate(90deg)
+              }
+              
+              #first::before {
+                --width: 1em;
+                --height: 1em;
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: calc(50% - var(--width)/2);
+                width: 1em;
+                height: 1em;
+                background-color: rgb(44, 0, 114);
+                box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
+                0px 0px 2px white;
+                border-radius: 50px;
+                animation: 0.8s ease-in 0s infinite running jump2;
+              }
+              
+              #second {
+                transform: rotate(90deg);
+              }
+              
+              #second::before {
+                --width: 1em;
+                --height: 1em;
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: calc(50% - var(--width)/2);
+                width: 1em;
+                height: 1em;
+                background-color: rgb(44, 0, 114);
+                box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
+                0px 0px 2px white;
+                border-radius: 50px;
+                animation: 1.5s ease-in 0s infinite running jump2;
+              }
+              
+              #third {
+                transform: rotate(90deg)
+              }
+              
+              #third::before {
+                --width: 1em;
+                --height: 1em;
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: calc(50% - var(--width)/2);
+                width: 1em;
+                height: 1em;
+                background-color: rgb(44, 0, 114);
+                box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
+                0px 0px 2px white;
+                border-radius: 50px;
+                animation: 1.6s ease-in 0s infinite running jump2;
+              }
+              
+              .loader::after {
+                --width: 1em;
+                --height: 1em;
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: calc(50% - var(--width)/2);
+                width: 1em;
+                height: 1em;
+                background-color: rgb(44, 0, 114);
+                box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
+                0px 0px 2px white;
+                border-radius: 50px;
+                animation: 1.2s ease-in 1s alternate infinite running jump2;
+              }
+              
+              @keyframes first682 {
+                0% {
+                  transform: rotate(0deg);
+                }
+              
+                25% {
+                  transform: rotate(0deg);
+                  transform: rotate(90deg)
+                }
+              
+                50% {
+                  transform: rotate(90deg);
+                  transform: rotate(180deg);
+                }
+              
+                75% {
+                  transform: rotate(180deg);
+                  transform: rotate(270deg)
+                }
+              
+                100% {
+                  transform: rotate(270deg);
+                  transform: rotate(360deg);
+                }
+              }
+              
+              @keyframes jump2 {
+                0% {
+                  top: 100%;
+                }
+              
+                25% {
+                  top: 230%
+                }
+              
+                50% {
+                  top: 100%;
+                }
+              
+                75% {
+                  height: 0.6em
+                }
+              
+                100% {
+                  height: 1em
+                }
+              }
+        </style>
+        
+<!--
+
+Luminous Plant HTML
+
+https://luminousplantseo.blogspot.com/
+
+-->
+
+    </head>
+    
+    <body class="projects-detail-page" id="section_1">
+        <header class="site-header">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-3 col-md-5 col-7">
+                        <p class="text-white mb-0">
+                          <img src="Location icon.jpg" alt="" width="40">
+                            U.A.E
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-5">
+                        <p class="text-white mb-0">
+                            <a href="tel: 240-480-9600" class="text-white">
+                                <i class="bi-telephone site-header-icon me-2"></i>
+                                240-480-9600
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-12 ms-auto">
+                            <ul class="social-icon">
+                            <li><a href="https://www.facebook.com/profile.php?id=100086249695583" class="social-icon-link bi-facebook" target="_blank"></a></li>                            <li><a href="https://www.linkedin.com/in/%D9%85%D9%87%D9%86%D8%AF-%D8%B4%D8%BA%D9%84%D9%8A%D9%84-971033255/" target="_blank" class="social-icon-link bi-linkedin"></a></li>
+
+                            <li><a href="https://twitter.com/Progra4Mohannad" class="social-icon-link bi-twitter" target="_blank"></a></li>
+
+                            <li><a href="https://www.instagram.com/mohannad_poragrammer/" class="social-icon-link bi-instagram" target="_blank"></a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg bg-white shadow-lg">
+            <div class="container">
+
+                <a href="index.html" class="navbar-brand">Luminous <span class="text-danger">Plant</span></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Luminous Plant.html#section_1"><small class="small-title"><strong class="text-warning">1</strong></small> Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="Luminous Plant.html#section_2"><small class="small-title"><strong class="text-warning">2</strong></small> About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="Luminous Plant.html#section_3"><small class="small-title"><strong class="text-warning">3</strong></small> Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="Luminous Plant.html"><small class="small-title"><strong class="text-warning">4</strong></small> Manufacturers</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="Luminous Plant.html"><small class="small-title"><strong class="text-warning">5</strong></small> Contact</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="Luminous Plant.html#section_6"><small class="small-title"><strong class="text-warning">6</strong></small> Projects</a>
+                      </li>
+                    </ul>
+                <div>
+                        
+            </div>
+        </nav>
+
+        <main>
+
+            <section class="hero section-hero section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12 text-center mx-auto">
+                            <div class="section-hero-text">
+                                <small class="small-title text-warning">Luminuos Plant</small>
+
+                                <h1 class="text-white">Makers</h1>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="projects section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-10 col-12 mb-5">
+                            <h2 class="mb-3">Creators of this website</h2>
+
+                            <p>Here we will review the people who came up with the idea and made this website.</p>
+
+                            <p>You may support a little PayPal donation to Luminous Plant by visiting our <a href="https://www.tooplate.com/contact">luminous Plant contact</a>. Thank you.</p>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-5">
+                            <img src="Manufacturers/Yusra Hasen Farah .gif" class="img-fluid projects-image" alt="">
+
+                            <h2 class="mt-3 mb-1">Yusra Hasen Farah</h2>
+
+                            <p>Yusra Farah is 39 years old, and she is an Arab woman, and she is considered one of the distinguished in teaching Arabic, and her nationality is Syrian, and now she lives in the Emirates, Ajman.</p>
+
+                            <p>She is the owner of the idea to create this website.</p>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-5">
+                            <img src="Manufacturers/Waleed Mahmed Shaghleel.gif" class="img-fluid projects-image" alt="">
+
+                            <h2 class="mt-3 mb-1">Wleed Mahmed Shaghleel</h2>
+
+                            <p>Walid is an accountant with the company and he also has news about electronic engineering. He is 38 years old, his nationality is Syrian, and he now lives in the Emirates in Ajman.</p>
+
+                            <p>It is the aggregator of information for the company that is on our official website</p>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <img src="Manufacturers/Mohannad Mahmed Shaghleel.gif" class="img-fluid projects-image" alt="">
+
+                            <h3 class="mt-3 mb-1">Mohannad Mahmed Shaghleel</h3>
+
+                            <p>Muhannad is 13 years old and is a web developer who works at Front-End and Back-End his nationality is Syrian, and he lives in Syria in Damascus.</p>
+
+                            <p>He is the one who designed this website.</p>
+                        </div>
+
+                        <div class="col-lg-4 col-12 my-lg-0 my-5">
+                            <img src="Manufacturers/Social Media.gif" class="img-fluid projects-image" alt="">
+
+                            <h3 class="mt-3 mb-1">Our social networking sites</h3>
+
+                            <p>Yusra Hasen Farah:
+                                <a href="https://www.facebook.com/sandy.bell.71" class="social-icon-link bi-facebook" target="_blank"></a>
+                                <a href="https://www.instagram.com/mohannad_shaghleel/" class="social-icon-link bi-instagram" target="_blank"></a><br>
+                            Visit her website<a href="https://yusrafarahws.blogspot.com/" target="_blank"><button>Yusra Website<svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path></svg></button></a></p>
+                            
+                            
+                            <p>Waleed Mahemd Shaghleel:
+                                <a href="https://www.facebook.com/profile.php?id=100005822430282&sk" class="social-icon-link bi-facebook" target="_blank"></a><br>
+                            Visit his website<a href="https://waleedmahmedws.blogspot.com/" target="_blank"><button>Waleed Website<svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path></svg></button></a></p>
+                            
+                            
+                            <p>Mohannad Mahemd Shaghleel: 
+                                <a href="https://www.facebook.com/profile.php?id=100086249695583" class="social-icon-link bi-facebook" target="_blank"></a>
+                                <a href="https://www.instagram.com/mohannad_poragrammer/" class="social-icon-link bi-instagram" target="_blank"></a><br>
+                                <a href="https://twitter.com/Progra4Mohannad" class="social-icon-link bi-twitter" target="_blank"></a>
+                                <a href="https://www.linkedin.com/in/%D9%85%D9%87%D9%86%D8%AF-%D8%B4%D8%BA%D9%84%D9%8A%D9%84-971033255/" target="_blank" class="social-icon-link bi-linkedin"></a><br>
+                            Visit his website<a href="https://mohannadws.blogspot.com/" target="_blank"><button> Mohannad Website<svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path></svg></button></a></p>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <img src="Manufacturers/Remote Meeting.gif" class="img-fluid projects-image" alt="">
+
+                            <h3 class="mt-3 mb-1">Remote Meeting</h3>
+
+                            <p>Coming Soon</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                        
+                    <div class="col-lg-6 col-12">
+                        <div class="site-footer-wrap d-flex align-items-center">
+                            <p class="copyright-text mb-0 me-4">Copyright © Mohannad Shaghleel</p>
+
+                            <ul class="social-icon">
+                            
+                            <li><a href="https://www.linkedin.com/in/%D9%85%D9%87%D9%86%D8%AF-%D8%B4%D8%BA%D9%84%D9%8A%D9%84-971033255/" target="_blank" class="social-icon-link bi-linkedin"></a></li>
+
+                            <li><a href="https://www.facebook.com/profile.php?id=100086249695583" class="social-icon-link bi-facebook" target="_blank"></a></li>
+
+                            <li><a href="https://twitter.com/Progra4Mohannad" class="social-icon-link bi-twitter" target="_blank"></a></li>
+
+                            <li><a href="https://www.instagram.com/mohannad_poragrammer/" class="social-icon-link bi-instagram" target="_blank"></a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-12">
+                    	<p class="copyright-text mb-0 me-4">The Web Developer that he make the website is Mohannad Shaghleel you can visit his website<a href="https://mohannadws.blogspot.com/" target="_blank"> Mohannad Website</a></p>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/magnific-popup-options.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
